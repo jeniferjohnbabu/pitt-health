@@ -1,0 +1,44 @@
+<mat-card class="login-card">
+    <mat-card-header>
+        <mat-card-title>Edit Patient</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="patientForm" (ngSubmit)="savePatientDetail(patientForm.value)" autocomplete="off" novalidate>
+            <mat-form-field>
+                <input matInput [value]="data.firstName" 
+                formControlName="firstName" 
+                placeholder="First Name" name="firstName">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="data.lastName" 
+                formControlName="lastName" 
+                placeholder="Last Name" name="lastName">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="data.visits" 
+                formControlName="visits" 
+                placeholder="Visits" name="visits">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="data.age" 
+                formControlName="age" 
+                placeholder="Age" name="age">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="data.pcp" 
+                formControlName="pcp" 
+                placeholder="Pcp" name="pcp">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="data.insurance" 
+                formControlName="insurance" 
+                placeholder="Insurance" name="insurance">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="data.payment" 
+                formControlName="payment" placeholder="Payment" name="payment">
+            </mat-form-field>
+            <button mat-raised-button color="primary">Save</button>
+        </form>
+    </mat-card-content>
+</mat-card>

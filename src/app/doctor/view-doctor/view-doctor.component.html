@@ -1,0 +1,28 @@
+<h1 mat-dialog-title> Doctor Details </h1>
+<div mat-dialog-content>
+    <p>FistName:  {{viewDoctor.firstName}}</p>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+    <p>LastName:  {{viewDoctor.LastName}}</p>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+    <p>Rating:  {{viewDoctor.rating}}</p>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+    <p>Age:  {{viewDoctor.age}}</p>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+    <p>Experience:  {{viewDoctor.experience}}</p>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+    <p>Insurance:  {{viewDoctor.insurance}}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()" cdkFocusInitial>OK</button>
+</div>
+  

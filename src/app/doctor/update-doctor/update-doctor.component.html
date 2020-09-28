@@ -1,0 +1,44 @@
+<mat-card  class="login-card">
+    <mat-card-header>
+        <mat-card-title>Edit Doctor</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="doctorForm" autocomplete="off" 
+            novalidate (ngSubmit)="saveDoctorDetail(doctorForm.value)" >
+            <p>
+                <mat-form-field>
+                    <input matInput 
+                        formControlName="firstName"
+                        placeholder="First Name" name="firstName">
+                </mat-form-field>
+            </p>
+            <mat-form-field>
+                <input matInput 
+                    formControlName="lastName"
+                    placeholder="Last Name" name="lastName">
+            </mat-form-field>   
+            <mat-form-field>
+                <input matInput
+                formControlName="rating"    
+                placeholder="Rating" name="rating">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput
+                    formControlName="age"
+                    placeholder="Age" name="age">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput
+                    formControlName="experience"
+                    placeholder="Experience" name="experience">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput
+                    formControlName="insurance"
+                    placeholder="Insurance" name="insurance">
+            </mat-form-field>
+            <button mat-raised-button color="primary">Save</button>
+            <button mat-raised-button color="warn" (click)="closeEditDoctor(); $event.preventDefault();">Close</button>
+        </form>
+    </mat-card-content>
+</mat-card>

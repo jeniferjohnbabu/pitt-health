@@ -1,0 +1,7 @@
+
+    <p mat-dialog-title>Are You Sure Want to Delete {{data.rowData.firstName}} {{data.rowData.lastName}}?</p>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onDeleteDoctor()" cdkFocusInitial>OK</button>
+    <button mat-button (click)="onNoClick()" cdkFocusInitial>cancel</button>
+</div>

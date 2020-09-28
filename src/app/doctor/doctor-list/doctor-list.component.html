@@ -1,0 +1,73 @@
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- First Column -->
+  <!-- <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> First Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+  </ng-container>
+
+  <!-- Last Name Column -->
+  <!-- <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> Last Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+  </ng-container> -->
+
+  <!-- Rating Column -->
+  <!-- <ng-container matColumnDef="rating">
+    <th mat-header-cell *matHeaderCellDef> Rating </th>
+    <td mat-cell *matCellDef="let element"> {{element.rating}} </td>
+  </ng-container> -->
+
+  <!-- Age Column -->
+  <!-- <ng-container matColumnDef="age">
+    <th mat-header-cell *matHeaderCellDef> Age </th>
+    <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+  </ng-container> -->
+
+  <!-- Exprerience Column -->
+  <!-- <ng-container matColumnDef="experience">
+    <th mat-header-cell *matHeaderCellDef> Exprerience </th>
+    <td mat-cell *matCellDef="let element"> {{element.experience}} </td>
+  </ng-container> -->
+
+  <!-- Insurance Column -->
+  <!-- <ng-container matColumnDef="insurance">
+    <th mat-header-cell *matHeaderCellDef> Insurance </th>
+    <td mat-cell *matCellDef="let element"> {{element.insurance}} </td>
+  </ng-container> -->
+
+  <!-- <ng-container matColumnDef="update">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element"> 
+      <button (click)="openDialog(element)" mat-icon-button class="example-icon" aria-label="Example icon-button with visibility icon">
+        <mat-icon>visibility</mat-icon>
+      </button>
+      
+      <button (click)="onEditDoctor(element)" mat-icon-button class="example-icon" aria-label="Example icon-button with edit icon">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button (click)="onRemoveDoctor(element)" mat-icon-button class="example-icon" aria-label="Example icon-button with remove_circle_outline icon">
+        <mat-icon>remove_circle_outline</mat-icon>
+      </button>
+      <button (click)="onAddDoctor()" mat-icon-button class="example-icon" aria-label="Example icon-button with remove_circle_outline icon">
+        <mat-icon>add_circle_outline</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> --> 
+
+<ag-grid-angular
+    style="width: 100%; height: 100%;"
+    class="ag-theme-alpine"
+    [rowData]="dataSource"
+    [columnDefs]="doctorColumnDefs"
+    [frameworkComponents]="frameWorksComponents"
+    (gridReady)="onGridReady($event)"
+    >
+</ag-grid-angular>

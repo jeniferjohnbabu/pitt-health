@@ -1,0 +1,9 @@
+
+<div *ngIf="availabilty" class="flex-container">
+    <div class="imageBox"><mat-icon>event_available</mat-icon></div> 
+    <div class="textBox">Available</div> 
+</div>
+<div *ngIf="!availabilty" class="flex-container">
+    <div class="imageBox"><mat-icon>event_busy</mat-icon></div> 
+    <div class="textBox">Not Available</div> 
+</div>

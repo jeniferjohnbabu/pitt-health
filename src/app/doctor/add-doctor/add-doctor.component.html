@@ -1,0 +1,59 @@
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+    <mat-step>
+      <form [formGroup]="newDoctorForm" (ngSubmit)="onNewDoctor(newDoctorForm.value)" novalidate>
+        <ng-template matStepLabel>Applicant Details</ng-template>
+          <div>
+            <mat-form-field>
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName" placeholder="First name" required>
+            </mat-form-field>
+          </div>
+          <div> 
+            <mat-form-field>
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="Last name" formControlName="lastName" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Rating</mat-label>
+            <input matInput formControlName="rating" placeholder=""
+                   required>
+          </mat-form-field>
+        </div>
+        
+        <div>
+          <mat-form-field>
+            <mat-label>Age</mat-label>
+            <input matInput formControlName="age" placeholder=""
+                   required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Experience</mat-label>
+            <input matInput formControlName="experience" placeholder=""
+                   required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Insurance</mat-label>
+            <input matInput formControlName="insurance" placeholder=""
+                   required>
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button>Submit</button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- <mat-step>
+      <ng-template matStepLabel>Submit</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step> -->
+  </mat-vertical-stepper>
